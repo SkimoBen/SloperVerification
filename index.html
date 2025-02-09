@@ -6,39 +6,10 @@
   <body>
     <h1 id="message">Verifying...</h1>
     <pre id="response"></pre>
+    <h2>Verification Successful. Go back to the app and sign in :)</h2>
 
     <script type="module">
-      import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-
-      // Replace with your own project details
-      const SUPABASE_URL = 'https://gubxeiodxwqzrywwyckk.supabase.co'
-      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1YnhlaW9keHdxenJ5d3d5Y2trIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY0NTkwMzEsImV4cCI6MjA1MjAzNTAzMX0.5VdplmwuESY7f5c9kl_I1lwvqDpBfZV5pITKjkNg0Fc'
-      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-
-      // Grab token_hash from ?code=... in the URL
-      const params = new URLSearchParams(window.location.search)
-      const tokenHash = params.get('code') // e.g. https://yoursite/?code=xxxx
-      const messageEl = document.getElementById('message')
-      const responseEl = document.getElementById('response')
-
-      if (tokenHash) {
-        supabase.auth.verifyOtp({ token_hash: tokenHash, type: 'email' })
-          .then(({ data, error }) => {
-            if (error) {
-              messageEl.textContent = 'Error verifying account'
-              responseEl.textContent = JSON.stringify(error, null, 2)
-            } else {
-              messageEl.textContent = 'Account verification successful'
-              responseEl.textContent = JSON.stringify(data, null, 2)
-            }
-          })
-          .catch(err => {
-            messageEl.textContent = 'Error verifying account'
-            responseEl.textContent = JSON.stringify(err, null, 2)
-          })
-      } else {
-        messageEl.textContent = 'Invalid or missing code'
-      }
+      
     </script>
   </body>
 </html>
