@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Verification</title>
+  </head>
+  <body>
+    <h1 id="message">Verifying...</h1>
+
+    <script type="module">
+      import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+      const SUPABASE_URL = 'https://YOUR-PROJECT.supabase.co'
+      const SUPABASE_ANON_KEY = 'YOUR-ANON-KEY'
+      const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+      // Extract tokens from URL fragment
+      const params = new URLSearchParams(window.location.hash.slice(1))
+      const access_token = params.get('access_token')
+      const refresh_token = params.get('refresh_token')
+
+      const messageEl = document.getElementById('message')
+
+      // If we have tokens, set the session and show result
+      if (access_token && refresh_token) {
+        supabase.auth.setSession({ access_token, refresh_token })
+          .then(({ error }) => {
+            if (error) {
+              messageEl.textContent = 'Error verifying account'
+            } else {
+              messageEl.textContent = 'Account verification successful'
+            }
+          })
+          .catch(() => {
+            messageEl.textContent = 'Error verifying account'
+          })
+      } else {
+        messageEl.textContent = 'Invalid token'
+      }
+    </script>
+  </body>
+</html>
