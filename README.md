@@ -1,2 +1,2 @@
 # SloperVerification
-Sussy verification website... for now! 
+Sloper Ice & Mixed authentication services live here. 
