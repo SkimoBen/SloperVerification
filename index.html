@@ -1,18 +1,132 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Account Verification</title>
-  </head>
-  <body>
-    <h1 id="message">Verifying...</h1>
-    <pre id="response"></pre>
-    <h2>Verification Successful. Go back to the app and sign in :)</h2>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <script type="module">
-      
-    </script>
-  </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sloper Ice & Mixed</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<section class="hero">
+    <div class="container hero-content">
+        <h1>Sloper Ice & Mixed</h1>
+        <p>An open database for ice and mixed climbing in the Canadian Rockies.</p>
+    </div>
+</section>
+
+<section class="sub-hero-section">
+    <div class="container">
+        <!-- content here -->
+        <h1>
+            Why this is different.
+        </h1>
+     
+        <p>
+            Ice and mixed climbing data is incredibly disparate, with route descriptions living everywhere from paper napkins to facebook posts. Sloper Ice & Mixed is a soltion to this. Founded on the belief that climbing data shouldn't have gatekeepers, we built this platform so that everyone can contribute to the history of ice and mixed climbing in the rockies. 
+        </p>
+        
+        <h2> 
+            How it works.
+        </h2>
+    
+        <p>
+            Sloper Ice & Mixed is a temporal database. meaning changes are tracked over time. This is important because it better reflects the nature of ice climbing routes, which can fluxuate wildly from season to season. 
+        </p>
+<div class="timeline-container">
+            <div class="timeline">
+                <button class="circle active" 
+                        data-user="MMMonty" 
+                        data-date="June 29th 2025"
+                        data-ates="3"
+                        data-aspect="N"
+                        data-length="120m"
+                        data-pitches="3">
+                </button>
+                <button class="circle" 
+                        data-user="ClimbBot" 
+                        data-date="July 3rd 2025"
+                        data-ates="3"
+                        data-aspect="N"
+                        data-length="130m"
+                        data-pitches="4">
+                </button>
+                <button class="circle" 
+                        data-user="IceQueen" 
+                        data-date="July 12th 2025"
+                        data-ates="2"
+                        data-aspect="NE"
+                        data-length="110m"
+                        data-pitches="3">
+                </button>
+                <button class="circle" 
+                        data-user="FrostMaster" 
+                        data-date="August 1st 2025"
+                        data-ates="3"
+                        data-aspect="N"
+                        data-length="120m"
+                        data-pitches="3">
+                </button>
+            </div>
+
+            <div class="description">
+                <h1 id="desc-title">Description</h1>
+                <p>Created by <span id="user" class="username">MMMonty</span>, on <span id="date" class="date">June 29th 2025</span></p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <span class="stat-label">ATES</span>
+                    <span class="stat-value" id="stat-ates">3</span>
+                    
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Aspect</span>
+                    <span class="stat-value" id="stat-aspect">N</span>
+                    
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Length</span>
+                    <span class="stat-value" id="stat-length">120m</span>
+                    
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Pitches</span>
+                    <span class="stat-value" id="stat-pitches">3</span>
+                    
+                </div>
+            </div>
+        </div>
+        <p>
+            It also means you don't need to worry about overwriting other climbers route descriptions, since those changes are saved by the date and can be easily accessed.
+        </p>
+        
+        <h3> 
+            If you think a route description sucks, just look at a different one. 
+        </h3>
+        <p>
+            If all of them suck, write a better one so that other climbers don't have to suffer. 
+        </p>
+        
+    </div>
+</section>
+
+<section class="screenshots">
+    <div class="container">
+        <!-- content here -->
+    </div>
+</section>
+
+<section class="download-section">
+    <div class="container">
+        <!-- content here -->
+    </div>
+</section>
+
+</body>
+<script src="timeline_component/timeline.js"></script>
 </html>
-
-
 
