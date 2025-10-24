@@ -29,7 +29,7 @@ h1,h2,h3,h4{ color:var(--heading); margin:0 0 .4rem; line-height:1.2; }
 p { margin: 0 0 1.1rem; 
     color:var(--muted); 
     font-weight: 500; 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .container{
@@ -149,7 +149,7 @@ h3 {
 ---------------------------------*/
 .main-body-bottom{ padding: 10px 0 40px; }
 .main-body-bottom h3{
-  font-size: clamp(20px, 2.6vw, 30px);
+  font-size: clamp(20px, 2.6vw, 34px);
   margin: 6px 0 14px;
 }
 .main-body-bottom p{
@@ -238,7 +238,7 @@ h3 {
   border-top: 1px solid var(--border);
 }
 .footer h4{
-  margin:0; font-weight:500; font-size: 13px;
+  margin:0; font-weight:500; font-size: 18px;
 }
 .footer a{
   color: inherit; text-decoration: underline; text-underline-offset: 2px;
@@ -253,6 +253,7 @@ h3 {
 /* ------------------------------
    Responsive
 ---------------------------------*/
+
 @media (max-width: 1024px){
   .sub-hero-section .container,
   .main-body-top{
@@ -267,9 +268,9 @@ h3 {
 
   .download-section .container{
     display: flex;
-    justify-content: center; /* ✅ Horizontally center download-inner */
-    align-items: center;     /* Keep vertical centering */
-    text-align: center;      /* Makes the heading & badges center nicely */
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;      
   }
 
   .download-inner{
@@ -279,10 +280,11 @@ h3 {
   .download-section .icon-div{ justify-self: center; }
 
   .store-badges{
-    justify-content: center; /* center the badges */
+    justify-content: center;
     width: 100%;
   }
 }
+
 
 @media (max-width: 640px){
   .hero{ min-height: 48vh; }
