@@ -56,7 +56,7 @@ h3 {
 .hero::before{
   content:"";
   position:absolute; inset:0;
-  background: url("../assets/willGBG.png") center/cover no-repeat;
+  background: url("../assets/Sloper\ Hero\ 2.jpg") center/cover no-repeat;
   opacity:.3;                 /* 30% opacity background image */
   z-index:-1;
 }
